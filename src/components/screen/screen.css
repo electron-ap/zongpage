@@ -1,0 +1,93 @@
+.list-title{
+    width: 1200px;
+    height: 26px;
+    margin: 0 auto;
+    display: '-webkit-flex'; /* Safari */
+    display: flex;
+    font-size: 14px;
+    color: #333333;
+    line-height: 26px;
+}
+.list-timessort{
+    margin-right: auto;
+}
+.list-number{
+    width: 168px;
+}
+.list-number-on{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+.timessort-pc{
+    display: inline-block;
+    width: 14px;
+    height: 12px;
+    background: url(../../assets/screen/timessort.png) no-repeat center center;
+    margin-left: 12px;
+    position: relative;
+    top: 2px;
+}
+.dload-pc{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    background: url(../../assets/screen/dload.png) no-repeat center center;
+    margin: 0 10px 0 10px;
+    position: relative;
+    top: 1px;
+}
+/* 3D打印-更新信息提示-弹窗 */
+.msg-nftion-wraper{
+    width: 100%;
+    height: 100%;
+    background-color:  rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.msg-nftion{
+    position : fixed;
+	left : 50%;
+	top : 50%;
+	width :400px;
+	height : 280px;
+	transform: translate(-50%, -50%);
+    padding: 23px 35px 30px;
+    background-color: #fff;
+    display: none;
+}
+.msg-title{
+    font-size: 20px;
+    font-weight: 400;
+    color: #333333;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+}
+.msg-p{
+    font-size: 14px;
+    font-weight: 400;
+    color: #333333;
+    height: 42px;
+    line-height: 42px;
+    border-bottom: 1px solid #E5E5E5;
+    margin-bottom: 0;
+}
+.msg-p-red{
+    color: #C30D23;
+}
+.msg-btn{
+    display: block;
+    width: 140px;
+    height: 40px;
+    background: #C30D23;
+    border-radius: 20px;
+    font-size: 14px;
+    color: #FFFFFF;
+    line-height: 26px;
+    border: none;
+    margin: 29px auto 0;
+    cursor: pointer;
+}
