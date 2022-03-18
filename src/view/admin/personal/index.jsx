@@ -11,7 +11,7 @@ const Personal = () => {
         <>
             <Myheader />
             <CourseBaner />
-            <div className="course-column">
+            <div className="admin-wraper">
                 
             </div>
             <Footer />
