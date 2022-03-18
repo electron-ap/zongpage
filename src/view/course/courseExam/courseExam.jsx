@@ -10,73 +10,91 @@ import CourseBaner from '../../../common/component/course/courseBaner'
 const dataSource = [
     {
       key: '1',
-      name: '开机',
-      publisher: '2min',
-      address: '1min35s',
-      size: '2022-12-12',
-      uploadtime: '',
+      name: '3D打印的开关机',
+      publisher: '3D打印机的操作',
+      address: '2022-12-12 30:21',
+      size: 'PASSED',
+      time: '-',
+      uploadtime: '2min30s',
     },
     {
       key: '2',
-      name: '如何添加辅料',
-      publisher: '5min',
-      address: '1min30s',
-      size: '2022-12-12',
-      uploadtime: '',
+      name: '3D打印的开关机',
+      publisher: '3D打印机的操作',
+      address: '2022-12-12 30:21',
+      size: 'FAILED',
+      time: '',
+      uploadtime: '2min30s',
     },
     {
       key: '3',
-      name: '开机',
-      publisher: '2min',
-      address: '1min35s',
-      size: '2022-12-12',
-      uploadtime: '',
+      name: '3D打印的开关机',
+      publisher: '3D打印机的操作',
+      address: '2022-12-12 30:21',
+      size: 'MAKE-UP',
+      time: '1',
+      uploadtime: '2min30s',
     },
     {
       key: '4',
-      name: '如何添加辅料',
-      publisher: '5min',
-      address: '1min30s',
-      size: '2022-12-12',
-      uploadtime: '',
+      name: '3D打印的开关机',
+      publisher: '3D打印机的操作',
+      address: '2022-12-12 30:21',
+      size: 'FAILED',
+      time: '2',
+      uploadtime: '2min30s',
     },   
   ];
   
   const columns = [
     {
-      title: '课程名称',
+      title: '考试',
       dataIndex: 'name',
       key: 'name',
+      width: 220,
 
     },
     {
-      title: '最低学习时间',
+      title: '课程名称',
       dataIndex: 'publisher',
       key: 'publisher',
+      width: 220,
     },
     {
-      title: '已学习时间',
+      title: '考试时间',
       dataIndex: 'address',
       key: 'address',
+      width: 210,
     },
     {
-      title: '截止日期',
+      title: '考试状态',
       dataIndex: 'size',
       key: 'size',
+      width: 120,
+      align: 'center',
+      render: (text) => {
+       if (text === "PASSED") {
+        return <div className="exam-passed">{text}</div>
+       } else if (text === "FAILED") {
+        return <div className="exam-failed">{text}</div>
+       }
+        return <div className="exam-makeup">{text}</div>
+      }
     },
     {
-        title: '进入考试',
-        dataIndex: 'uploadtime',
-        key: 'uploadtime',
-        width: 150,
-        render: (text) => {
-            return <div className="course-enter">{text}进入考试</div>
-        }
+        title: '补考次数',
+        dataIndex: 'time',
+        key: 'time',
+        align: 'center',        
     },
-    
+    {
+      title: '时长',
+      dataIndex: 'uploadtime',
+      key: 'uploadtime',
+    },
   ];
 
-const CourseOk = () => {
+const CourseExam = () => {
     useBackground('#f7f7f7');
     return (
         <>
@@ -93,11 +111,11 @@ const CourseOk = () => {
                         <span>12</span>
                         <p>学习中</p>
                     </li>
-                    <li className="column-ulli columnactive">
+                    <li className="column-ulli">
                         <span>8</span>
                         <p>已完成</p>
                     </li>
-                    <li className="column-ulli">
+                    <li className="column-ulli columnactive">
                         <span>2</span>
                         <p>考试</p>
                     </li>
@@ -118,4 +136,4 @@ const CourseOk = () => {
         </>
     )
 }
-export default CourseOk
+export default CourseExam
